@@ -39,10 +39,10 @@ public class Test_Diplom_project {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        WebElement phone =driver.findElement(By.xpath("//input[@id=\"phone\"]"));//не работает
+        WebElement phone =driver.findElement(By.xpath("//input[@id=\"phone\"]"));
         phone.sendKeys("0993605735");
 
-        WebElement send_code = driver.findElement(By.xpath("//button[@id=\"sign-in-button\"]"));//Сменить цвет кнопки
+        WebElement send_code = driver.findElement(By.xpath("//button[@id=\"sign-in-button\"]"));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("document.getElementById('sign-in-button').setAttribute('color', '#00000')");
 
@@ -136,7 +136,6 @@ public class Test_Diplom_project {
     //Checking the transition to the "Contacts" button
     @Test
     public void contacts () {
-
         WebElement contacts = driver.findElement(By.xpath("//a[@href=\"https://restoratsia.kr.ua/head#contacts\"]"));
         contacts.click();
     }
